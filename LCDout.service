@@ -1,0 +1,13 @@
+[Unit]
+Description=LCDout
+After=multi-user.target
+
+
+[Service]
+User=pi
+WorkingDirectory=/home/pi/LCD
+ExecStart=/usr/bin/python3 LCDout.py
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
